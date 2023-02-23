@@ -71,3 +71,12 @@ gem "autoprefixer-rails"
 gem "font-awesome-sass", "~> 6.1"
 gem "simple_form", github: "heartcombo/simple_form"
 gem "sassc-rails" # Uncomment this line
+
+gem 'faker'
+gem 'dotenv-rails', '~> 2.1', '>= 2.1.1'
+
+gem 'mime-types', '~> 3.4', '>= 3.4.1'
+gem 'netrc', '~> 0.11.0'
+gem 'http-accept', '~> 2.2'
+gem 'http-cookie', '~> 1.0', '>= 1.0.5'
+gem 'rest-client'
