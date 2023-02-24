@@ -52,21 +52,19 @@ def bookmarks_dataset(api_base, request)
 
   movies_array.each do |movie|
     movie_id = movie["id"]
-    list_id = movie["genre_ids"].first
+    list_ids = movie["genre_ids"]
 
-    current_movie = Movie.find(movie_id)
-    current_list = List.find(list_id)
+    list_ids.each do |list|
+      current_bookmark = Bookmark.new(
+        comment: Faker::Movie.quote
+      )
+  
+      current_movie = Movie.find(movie_id)
 
-    # puts list_id.class
-
-    current_bookmark = Bookmark.new(
-      comment: Faker::Movie.quote
-      # comment: "Faker::Movie.quote"
-    )
-
-    current_bookmark.list = current_list
-    current_bookmark.movie = current_movie
-    current_bookmark.save
+      current_bookmark.list = List.find(list)
+      current_bookmark.movie = current_movie
+      current_bookmark.save
+    end
   end
 end
 

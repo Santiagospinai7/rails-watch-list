@@ -1,10 +1,22 @@
-<h1>Lists#index</h1>
-<p>Find me in app/views/lists/list.html.erb</p>
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4">Save any kind of movie</h1>
+  </div>
+</div>
 
-<% @lists.each do |list| %>
-  <li>
-    <p><%= link_to list.name, list_path(list) %> </p>
-  </li>
-<% end %>
+<div class="container">
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+    <% @lists.each do |list| %>
+      <div class="col">
+        <div class="card h-100">
+          <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/041.webp" class="card-img-top" alt="Hollywood Sign on The Hill"/>
+          <div class="card-body">
+            <h5 class="card-title"><%= list.name %></h5>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
 
 <%= link_to "+ Create a new list", new_list_path%>
