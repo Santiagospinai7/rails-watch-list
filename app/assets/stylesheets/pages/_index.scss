@@ -2,5 +2,19 @@
 @import "home";
 
 body {
-  background-color: #BCAAA4;
+  background-color: #191A1F;
+}
+
+#title {
+  color: white;
+}
+
+#title-container {
+  margin: 1em 0em;
+  width: 100%;
+  padding-right: calc(var(--bs-gutter-x) * .5);
+  padding-left: calc(var(--bs-gutter-x) * .5);
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
 }

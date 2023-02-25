@@ -1,22 +1,19 @@
 <div class="jumbotron jumbotron-fluid">
-  <div class="container">
-    <h1 class="display-4">Save any kind of movie</h1>
+  <div id="title-container">
+    <h1 id="title" class="display-4">Save any kind of movie</h1>
   </div>
 </div>
 
-<div class="container">
-  <div class="row row-cols-1 row-cols-md-3 g-4">
+<%= link_to "+ Create a new list", new_list_path%>
+
+<div class="cards-body">
+  <div class="cards-container">
     <% @lists.each do |list| %>
-      <div class="col">
-        <div class="card h-100">
-          <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/041.webp" class="card-img-top" alt="Hollywood Sign on The Hill"/>
-          <div class="card-body">
-            <h5 class="card-title"><%= list.name %></h5>
-          </div>
+      <div class="b-game-card">
+        <div class="b-game-card__cover" style="background-image: url(<%= asset_path 'cine_category.jpeg' %>);">
+          <h1><%= list.name %></h1>
         </div>
       </div>
     <% end %>
   </div>
 </div>
-
-<%= link_to "+ Create a new list", new_list_path%>
