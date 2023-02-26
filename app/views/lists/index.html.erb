@@ -7,13 +7,15 @@
 <%= link_to "+ Create a new list", new_list_path%>
 
 <div class="cards-body">
-  <div class="cards-container rounded">
-    <% @lists.each do |list| %>
-      <div class="b-game-card">
-        <div class="b-game-card__cover" style="background-image: url(<%= asset_path 'cine_category.jpeg' %>);">
-          <h1><%= list.name %></h1>
-        </div>
-      </div>
-    <% end %>
-  </div>
+    <div class="cards-container rounded">
+      <% @lists.each do |list| %>
+        <%= link_to list_path(list), class:"text-decoration-none" do %>
+          <div class="b-game-card">
+            <div class="b-game-card__cover" style="background-image: url(<%= asset_path 'cine_category.jpeg' %>);">
+              <h1 id="list-name"><%= list.name %></h1>
+            </div>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
 </div>

@@ -11,6 +11,12 @@ $c_1: #353540;
 //   box-sizing: border-box;
 // }
 
+#list-name {
+  align-content: center;
+  text-align: center;
+  position: absolute;               /* 2 */
+  top: 50%;
+}
 
 .cards-body {
   display: flex;
