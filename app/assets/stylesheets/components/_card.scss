@@ -21,6 +21,7 @@ $c_1: #353540;
 
 
 .cards-container {
+  box-sizing: border-box;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 30px;
@@ -51,7 +52,7 @@ $c_1: #353540;
     width: 100%;
     height: 100%;
     overflow: hidden;
-    background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+    background-image: linear-gradient(120deg, #f4d779b1 0%, #f9b29fbc 100%);
     background-size: cover;
     perspective-origin: 50% 50%;
     transform-style: preserve-3d;
@@ -71,7 +72,7 @@ $c_1: #353540;
       left: 0;
       width: 100%;
       height: 120%;
-      background: linear-gradient(226deg, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0.4) 35%, rgba(255,255,255,0.2) 42%, rgba(255,255,255,0) 60%);
+      background: linear-gradient(226deg, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0.4) 20%, rgba(255,255,255,0.2) 32%, rgba(255,255,255,0) 40%);
       transform: translateY(-20%);
       will-change: transform;
       transition: transform .65s cubic-bezier(0.18, 0.9, 0.58, 1);
